@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерия - ЮНЕСКО България</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Page specific styles */
+        .page-banner {
+            height: 40vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('Images/banner-gallery.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 70px;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 1rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .gallery-info {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-content {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .info-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .info-stats {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .stat-label {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .text-center {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light-color);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">
+            <h2>ЮНЕСКО</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="cultural-heritage.html">Културно наследство</a></li>
+            <li><a href="natural-heritage.html">Природно наследство</a></li>
+            <li><a href="gallery.html" class="active">Галерия</a></li>
+            <li><a href="about-unesco.html">За ЮНЕСКО</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="page-banner">
+        <h1>Галерия</h1>
+    </div>
+
+    <div class="container section">
+        <h2>Красотата на световното наследство в България</h2>
+        <p class="text-center">Разгледайте колекцията от впечатляващи снимки на обекти под закрилата на ЮНЕСКО в България</p>
+        
+        <div class="gallery-info">
+            <div class="info-content">
+                <p>България се гордее с 9 обекта, които са включени в списъка на световното наследство на ЮНЕСКО - 7 културни и 2 природни. Тези съкровища представляват забележителни примери за българската история, култура и природно разнообразие, събрани тук в нашата виртуална галерия.</p>
+                <p>В секцията за <strong>културно наследство</strong> можете да се насладите на изображения на древни манастири, църкви, гробници и архитектурни паметници с историческо значение. В секцията за <strong>природно наследство</strong> ще откриете изумителни пейзажи на защитените природни обекти.</p>
+                <p>Използвайте филтрите по-долу, за да разгледате конкретни категории обекти.</p>
+            </div>
+            <div class="info-stats">
+                <div class="stat">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label">Културни обекта</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Природни обекта</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1979</span>
+                    <span class="stat-label">Година на първо включване</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="categories">
+            <button class="category-btn active">Всички</button>
+            <button class="category-btn">Културни обекти</button>
+            <button class="category-btn">Природни обекти</button>
+            <button class="category-btn">Архитектура</button>
+            <button class="category-btn">Природа</button>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="gallery-item" data-category="cultural architecture">
+                <img src="Images/rilski-manastir.webp" alt="Рилски манастир">
+                <div class="gallery-caption">
+                    <h3>Рилски манастир</h3>
+                    <p>Най-големият манастир в България</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cultural architecture">
+                <img src="Images/BoyanaChurch.jpg" alt="Боянска църква">
+                <div class="gallery-caption">
+                    <h3>Боянска църква</h3>
+                    <p>Средновековни стенописи от 13 век</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cultural architecture">
+                <img src="Images/trakiiska-grobnitsa.jpg" alt="Тракийска гробница в Казанлък">
+                <div class="gallery-caption">
+                    <h3>Тракийска гробница в Казанлък</h3>
+                    <p>Елинистични стенописи от 4 век пр.н.е.</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cultural architecture">
+                <img src="Images/ivanovo.jpg" alt="Скални църкви в Иваново">
+                <div class="gallery-caption">
+                    <h3>Скални църкви в Иваново</h3>
+                    <p>Средновековни църкви, издълбани в скалите</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cultural architecture">
+                <img src="Images/Nesebar.jpg" alt="Старият град Несебър">
+                <div class="gallery-caption">
+                    <h3>Старият град Несебър</h3>
+                    <p>Древно селище с богата история</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cultural architecture">
+                <img src="Images/sveshtari.jpg" alt="Тракийска гробница в Свещари">
+                <div class="gallery-caption">
+                    <h3>Тракийска гробница в Свещари</h3>
+                    <p>Уникалните кариатиди от 3 век пр.н.е.</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="cultural">
+                <img src="Images/madara-horseman.jpg" alt="Мадарският конник">
+                <div class="gallery-caption">
+                    <h3>Мадарският конник</h3>
+                    <p>Скален релеф от 8 век</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="natural nature">
+                <img src="Images/Pirin.jpg" alt="Национален парк Пирин">
+                <div class="gallery-caption">
+                    <h3>Национален парк Пирин</h3>
+                    <p>Впечатляваща природа и биоразнообразие</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="natural nature">
+                <img src="Images/sreburna.jpg" alt="Природен резерват Сребърна">
+                <div class="gallery-caption">
+                    <h3>Природен резерват Сребърна</h3>
+                    <p>Убежище за редки водни птици</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>За проекта</h3>
+                    <p>Този сайт представя обектите на световното наследство на ЮНЕСКО в България.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p>Имейл: info@unesco-bulgaria.com</p>
+                    <p>Телефон: +359 888 123 456</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Последвайте ни</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ЮНЕСКО България. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            // Add click event to each category button
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get category value
+                    const category = this.textContent.toLowerCase();
+                    
+                    // Filter gallery items
+                    galleryItems.forEach(item => {
+                        // Show all items if "Всички" is selected
+                        if (category === 'всички') {
+                            item.style.display = 'block';
+                            return;
+                        }
+                        
+                        // Get item categories
+                        const itemCategories = item.dataset.category.split(' ');
+                        
+                        // Check if category matches
+                        if (category === 'културни обекти' && itemCategories.includes('cultural')) {
+                            item.style.display = 'block';
+                        } else if (category === 'природни обекти' && itemCategories.includes('natural')) {
+                            item.style.display = 'block';
+                        } else if (category === 'архитектура' && itemCategories.includes('architecture')) {
+                            item.style.display = 'block';
+                        } else if (category === 'природа' && itemCategories.includes('nature')) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

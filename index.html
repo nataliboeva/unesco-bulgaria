@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЮНЕСКО България</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation first -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <h2>ЮНЕСКО</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Начало</a></li>
+            <li><a href="cultural-heritage.html">Културно наследство</a></li>
+            <li><a href="natural-heritage.html">Природно наследство</a></li>
+            <li><a href="gallery.html">Галерия</a></li>
+            <li><a href="about-unesco.html">За ЮНЕСКО</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero section after nav -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Световното наследство на България</h1>
+            <p class="subtitle">Открийте магията на българските съкровища под закрилата на ЮНЕСКО</p>
+            <a href="cultural.html" class="cta-button">Започнете пътешествието</a>
+        </div>
+    </div>
+
+    <section id="intro" class="section">
+        <div class="container">
+            <h2>ЮНЕСКО в България</h2>
+            <p>ЮНЕСКО (Организацията на обединените нации за образование, наука и култура) поддържа списък на обекти със световно значение. България има 9 обекта в този списък 7 културни и 2 природни.</p>
+            
+            <div class="map-container">
+                <img src="images/Bulgaria_map.png" alt="Карта на България" class="map">
+                <p>Карта на България с отбелязани обекти на ЮНЕСКО</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="section">
+        <div class="container">
+            <div class="stat-container">
+                <div class="stat-item">
+                    <span class="counter" data-target="9">9</span>
+                    <p>Обекта под закрила</p>
+                </div>
+                <div class="stat-item">
+                    <span class="counter" data-target="7">7</span>
+                    <p>Културни обекта</p>
+                </div>
+                <div class="stat-item">
+                    <span class="counter" data-target="2">2</span>
+                    <p>Природни обекта</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preview" class="section">
+        <div class="container">
+            <h2>Разгледай съкровищата на България!</h2>
+            <div class="preview-cards">
+                <div class="preview-card">
+                    <img src="Images/rilski-manastir.webp" alt="Рилски манастир">
+                    <div class="card-overlay">
+                        <h3>Рилски манастир</h3>
+                        <p>Най-големият манастир в България</p>
+                        <a href="cultural.html" class="card-btn">Научи повече</a>
+                    </div>
+                </div>
+                <div class="preview-card">
+                    <img src="Images/Nesebar.jpg" alt="Несебър">
+                    <div class="card-overlay">
+                        <h3>Старият град Несебър</h3>
+                        <p>Древен град с богата история</p>
+                        <a href="cultural.html" class="card-btn">Научи повече</a>
+                    </div>
+                </div>
+                <div class="preview-card">
+                    <img src="Images/Pirin.jpg" alt="Пирин">
+                    <div class="card-overlay">
+                        <h3>Национален парк Пирин</h3>
+                        <p>Впечатляваща природа и биоразнообразие</p>
+                        <a href="natural.html" class="card-btn">Научи повече</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>За проекта</h3>
+                    <p>Този сайт представя обектите на световното наследство на ЮНЕСКО в България.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p>Имейл: info@unesco-bulgaria.com</p>
+                    <p>Телефон: +359 888 123 456</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Последвайте ни</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ЮНЕСКО България. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

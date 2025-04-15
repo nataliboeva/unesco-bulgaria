@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Природно наследство - ЮНЕСКО България</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Page specific styles */
+        .page-banner {
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('Images/pirin-banner.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 70px;
+        }
+        
+        .site-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .site-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .site-image {
+            flex: 0 0 300px;
+            height: 200px;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .site-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .site-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .species-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .species-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .species-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .species-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-callout {
+            padding: 1.5rem;
+            background: rgba(42, 157, 143, 0.15);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .gallery-photo {
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .gallery-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-photo:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">
+            <h2>ЮНЕСКО</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="cultural-heritage.html">Културно наследство</a></li>
+            <li><a href="natural-heritage.html" class="active">Природно наследство</a></li>
+            <li><a href="gallery.html">Галерия</a></li>
+            <li><a href="about-unesco.html">За ЮНЕСКО</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="page-banner">
+        <h1>Природно наследство</h1>
+    </div>
+
+    <div class="container section">
+        <h2>Природни обекти под закрилата на ЮНЕСКО в България</h2>
+        <p>България се гордее с два обекта на природното наследство, които са включени в списъка на ЮНЕСКО заради своята изключителна природна стойност, биоразнообразие и геоложка значимост.</p>
+        
+        <div class="site-container">
+            <div class="site-header">
+                <div class="site-image">
+                    <img src="Images/Pirin.jpg" alt="Национален парк Пирин">
+                </div>
+                <div class="site-info">
+                    <h3>Национален парк Пирин</h3>
+                    <p><strong>Година на включване:</strong> 1983 (разширен през 2010)</p>
+                    <p><strong>Площ:</strong> 40,356 хектара</p>
+                    <p>Национален парк Пирин е високопланински парк в Югозападна България, съхраняващ забележителни алпийски ландшафти, ледникови езера, вековни иглолистни гори и богато биоразнообразие.</p>
+                </div>
+            </div>
+            <div>
+                <h4>Географско местоположение</h4>
+                <p>Паркът заема голяма част от планината Пирин и се намира в Благоевградска област. Пирин е част от Рило-Родопския масив в Югозападна България. Най-високата точка в парка е връх Вихрен (2914 м), който е вторият по височина връх в България и третият на Балканския полуостров.</p>
+                
+                <div class="info-callout">
+                    <p><strong>Интересен факт:</strong> Пирин се характеризира с алпийски релеф с над 70 ледникови езера, известни като "Пирински очи". Най-голямото от тях е Поповото езеро с площ от 12 хектара.</p>
+                </div>
+                
+                <h4>Уникалност на природата</h4>
+                <p>Пирин се отличава със своята забележителна геоморфология, формирана от ледникова дейност. В парка се намират многобройни циркуси, ледникови долини, ледникови езера и други форми на релефа, които са резултат от ледниковата активност през кватернерния период.</p>
+                <p>Паркът се характеризира и с голямо разнообразие от растителни съобщества, включително обширни иглолистни гори, субалпийски и алпийски ливади. Тук се срещат някои от най-старите дървета в България - вековни черни мури (Pinus heldreichii) и бяла мура (Pinus peuce), някои от които са на възраст над 1000 години.</p>
+                
+                <h4>Защитени видове</h4>
+                <p>Национален парк Пирин е дом на забележително биоразнообразие, включващо:</p>
+                
+                <div class="species-grid">
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-leaf"></i></div>
+                        <p>Над 1300 вида растения</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-seedling"></i></div>
+                        <p>Над 300 вида мъхове</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-paw"></i></div>
+                        <p>45 вида бозайници</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-feather-alt"></i></div>
+                        <p>159 вида птици</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-frog"></i></div>
+                        <p>11 вида земноводни</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-dragon"></i></div>
+                        <p>15 вида влечуги</p>
+                    </div>
+                </div>
+                
+                <p>Сред емблематичните видове в Пирин са кафявата мечка, вълкът, дивата коза, скалният орел и глухарят. Тук могат да се срещнат и редица ендемични растения като пиринската мащерка, пиринския мак и пиринската песъчарка.</p>
+                
+                <h4>Снимки от Пирин</h4>
+                <div class="photo-gallery">
+                    <div class="gallery-photo">
+                        <img src="Images/bansko.webp" alt="Банско и Пирин">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="Images/ezero.jpg" alt="Ледниково езеро в Пирин">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="Images/vihren.webp" alt="Връх Вихрен">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="Images/forest.jpg" alt="Гора в Пирин">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="site-container">
+            <div class="site-header">
+                <div class="site-image">
+                    <img src="Images/biosferen.jpg" alt="Биосферен резерват Сребърна">
+                </div>
+                <div class="site-info">
+                    <h3>Биосферен резерват Сребърна</h3>
+                    <p><strong>Година на включване:</strong> 1983</p>
+                    <p><strong>Площ:</strong> 600 хектара</p>
+                    <p>Сребърна е сладководно езеро и биосферен резерват, разположен на река Дунав, който е международно значимо местообитание за водни птици и важно място по миграционния път Via Pontica.</p>
+                </div>
+            </div>
+            <div>
+                <h4>Географско местоположение</h4>
+                <p>Резерватът е разположен в Североизточна България, на 16 км западно от град Силистра, на южния бряг на река Дунав. Намира се в непосредствена близост до границата с Румъния. Резерватът включва езерото Сребърна и околните влажни зони.</p>
+                
+                <div class="info-callout">
+                    <p><strong>Интересен факт:</strong> Името "Сребърна" идва от сребристия блясък на водната повърхност на езерото при лунна светлина.</p>
+                </div>
+                
+                <h4>Уникалност на природата</h4>
+                <p>Сребърна е едно от малкото естествени крайдунавски езера в България, което е запазило своя първоначален характер. Резерватът е включен в списъка на ЮНЕСКО заради своята важност като местообитание за водни птици и биоразнообразие.</p>
+                <p>Резерватът включва открита водна площ, обширни тръстикови масиви, плаващи тръстикови острови (наричани "кочки"), влажни ливади и гори. Тази мозайка от местообитания създава условия за богато биоразнообразие.</p>
+                
+                <h4>Защитени видове</h4>
+                <p>Сребърна е дом на важни популации на световно застрашени видове птици и е ключово място за миграция, зимуване и гнездене на много видове.</p>
+                
+                <div class="species-grid">
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-feather"></i></div>
+                        <p>Над 220 вида птици</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-water"></i></div>
+                        <p>27 вида риби</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-bug"></i></div>
+                        <p>Над 1000 вида безгръбначни</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-seedling"></i></div>
+                        <p>139 вида висши растения</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-paw"></i></div>
+                        <p>11 вида бозайници</p>
+                    </div>
+                    <div class="species-item">
+                        <div class="species-icon"><i class="fas fa-frog"></i></div>
+                        <p>10 вида земноводни и влечуги</p>
+                    </div>
+                </div>
+                
+                <p>Резерватът е особено известен с гнездящата колония на къдроглавия пеликан (Pelecanus crispus), която е една от най-големите в Европа. Други значими видове, които могат да се наблюдават тук, са малкият корморан, белооката потапница, червеногушата гъска, белият лопатар и чаплите.</p>
+                
+                <h4>Снимки от Сребърна</h4>
+                <div class="photo-gallery">
+                    <div class="gallery-photo">
+                        <img src="Images/sreburna.jpg" alt="Езерото Сребърна">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="Images/pelikani.jpg" alt="Пеликани в Сребърна">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="Images/ptici.jpg" alt="Птици в резервата">
+                    </div>
+                    <div class="gallery-photo">
+                        <img src="Images/trastika.jpg" alt="Тръстики в Сребърна">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>За проекта</h3>
+                    <p>Този сайт представя обектите на световното наследство на ЮНЕСКО в България.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p>Имейл: info@unesco-bulgaria.com</p>
+                    <p>Телефон: +359 888 123 456</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Последвайте ни</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ЮНЕСКО България. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
