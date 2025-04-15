@@ -51,22 +51,74 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Анимация на мобилното меню
-const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-    
-    burger.addEventListener('click', () => {
-        // Toggle navigation
+// Mobile Navigation
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links li');
+
+if (burger) {
+    burger.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent click from bubbling to document
+        
+        // Toggle Nav
         nav.classList.toggle('nav-active');
         
-        // Animate burger
+        // Toggle Burger Animation
         burger.classList.toggle('toggle');
+        
+        // Animate Links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
+        });
     });
-};
+}
 
-navSlide();
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (nav.classList.contains('nav-active') && 
+        !e.target.closest('.nav-links') && 
+        !e.target.closest('.burger')) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        
+        // Reset link animations
+        navLinks.forEach(link => {
+            link.style.animation = '';
+        });
+    }
+});
+
+// Close mobile menu when clicking on a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        
+        // Reset link animations
+        navLinks.forEach(link => {
+            link.style.animation = '';
+        });
+    });
+});
+
+// Add keyframe animation for nav links
+const style = document.createElement('style');
+style.textContent = `
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}`;
+document.head.appendChild(style);
 
 // Динамично генериране на карти с обекти
 const featuredSites = [
